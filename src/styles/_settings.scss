@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$gray-1: rgb(217, 216, 216);
+$blue-1: rgb(34, 116, 175);
+
+body {
+  font-size: 16px;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+.follow {
+  margin: 2.5px;
+  background-color: rgb(34, 116, 175);
+  color: white;
+
+  padding: 5px 10px;
+  border-radius: 30px;
+  border: 1px solid rgb(34, 116, 175);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(12, 71, 112);
+  }
+}

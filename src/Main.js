@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import BestWriters from "./components/BestWriters";
 import Header from "./components/Header";
+import Log from "./components/Log";
 import MiniFooter from "./components/MiniFooter";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
@@ -15,7 +16,7 @@ const Main = () => {
   useEffect(() => {
     axios
       .get(
-        "https://newsapi.org/v2/everything?q=tesla&from=2022-12-18&sortBy=publishedAt&apiKey=fc14d55b96cd41efb5e9459c5b07488c"
+        "https://newsapi.org/v2/everything?q=tesla&from=2022-12-19&sortBy=publishedAt&apiKey=015c11e6ebf4450da33fd062ea3ca061"
       )
       .then((res) => {
         setTotalsResults(res.data.totalResults);
@@ -27,6 +28,7 @@ const Main = () => {
 
   return (
     <div className="app">
+      <Log />
       <NavBar />
       <div className="main-container">
         <div className="left-part">

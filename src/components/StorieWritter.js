@@ -4,10 +4,11 @@ import WriterPhoto from "./WriterPhoto";
 const StorieWritter = ({ totalResults }) => {
   const formatNumber = () => {
     const myNumber = totalResults;
+    console.log(myNumber);
 
     if (myNumber > 999) {
       const myString = myNumber.toString();
-      return myString.slice(0, 2) + "K";
+      return myString.slice(0, 2) + "." + myString.at(2) + "K";
     } else return totalResults;
   };
 

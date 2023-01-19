@@ -1,0 +1,78 @@
+.log-component {
+  font-size: 0.9rem;
+  ul {
+    display: flex;
+
+    li {
+      margin: 0 2px;
+      border-radius: 30px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    li#sign-up {
+      background-color: rgb(34, 116, 175);
+      color: white;
+    }
+    li#sign-in {
+      color: rgb(89, 86, 86);
+    }
+  }
+}
+
+.profil {
+  position: relative;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+
+  .user-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eee;
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .cheron-icon {
+    cursor: pointer;
+  }
+
+  .profil-modal {
+    z-index: 200;
+    width: 265px;
+    border: 1px solid #eee;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+
+    ul {
+      display: grid;
+
+      li {
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.profil-modal.show {
+  visibility: hidden;
+  transform: translateZ(0);
+}
+.profil-modal.hide {
+  visibility: visible;
+  transform: translateZ(-100px);
+}

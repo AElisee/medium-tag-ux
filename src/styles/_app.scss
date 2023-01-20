@@ -4,10 +4,20 @@
 
     @media screen and (max-width: 768px) {
       display: block;
+      display: flex;
+      justify-content: end;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+
+      li {
+        padding: 5px 8px;
+        font-size: 0.7rem;
+      }
     }
   }
   // navbar
   .navbar {
+    background-color: antiquewhite;
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: space-between;
@@ -47,6 +57,12 @@
       align-items: center;
       justify-content: flex-end;
 
+      .log-component {
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+
       .write {
         display: flex;
         align-items: center;
@@ -70,11 +86,16 @@
     grid-template-columns: 69% 31%;
     justify-content: space-between;
 
+    @media screen and (max-width: 1050px) {
+      grid-template-columns: 100%;
+    }
+
     //left part
     .left-part {
-      width: 650px;
+      // width: 650px;
       // header
       .header {
+        width: 100%;
         padding: 50px 0;
 
         h2 {
@@ -103,22 +124,30 @@
       // ---
 
       .new-container {
-        display: grid;
-        grid-template-columns: 75% 25%;
         .news {
           #lastest {
             width: 679px;
             padding: 10px 0;
             border-bottom: 1px solid $gray-1;
             text-transform: capitalize;
+
+            @media screen and (max-width: 1050px) {
+              width: 100%;
+            }
           }
+
           .item-container {
             display: grid;
-            width: max-content;
+            width: 100%;
+
             .item {
               width: 679px;
               padding: 20px 0;
               border-bottom: 1px solid $gray-1;
+
+              @media screen and (max-width: 1050px) {
+                width: 100%;
+              }
 
               .article {
                 padding-left: 10px;
@@ -385,6 +414,9 @@
             font-size: 0.9rem;
           }
         }
+      }
+      @media screen and (max-width: 1050px) {
+        display: none;
       }
     }
   }

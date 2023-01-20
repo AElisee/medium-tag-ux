@@ -18,13 +18,17 @@ const Profil = () => {
       </div>
 
       <div className={`profil-modal ${showProfil ? "show" : "hide"}`}>
-        <p>Démarrez sur App</p>
+        <p id="start" className="pointer">
+          Démarrez avec News
+        </p>
         <Log />
         <div>
-          <p>
-            <span>Devenir membre</span> <span>etoile</span>
+          <p id="p-star">
+            <span>Devenir membre</span> <span id="star">&#9733;</span>
           </p>
-          <p>postulez au programme parteneaire</p>
+          <p>
+            postulez au programme <br /> parteneaire
+          </p>
           <p>Offrir une adhésion</p>
         </div>
       </div>

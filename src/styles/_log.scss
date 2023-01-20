@@ -52,8 +52,11 @@
     top: calc(100% + 10px);
     right: 0;
     background-color: white;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.23);
     border-radius: 15px;
     padding: 10px;
+    display: grid;
+    gap: 1rem;
 
     ul {
       display: grid;
@@ -63,7 +66,34 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 5px 0;
       }
+      li:nth-child(2) {
+        border: 1px solid $blue-1;
+      }
+    }
+
+    p#start {
+      font-size: 1.1rem;
+      padding: 10px 0;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.837);
+    }
+
+    p#p-star {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      #star {
+        color: rgb(255, 136, 0);
+        font-size: 1.5rem;
+      }
+    }
+    p {
+      font-size: 0.8rem;
+      margin: 10px 0;
+      color: rgba(0, 0, 0, 0.627);
     }
   }
 }

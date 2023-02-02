@@ -16,8 +16,8 @@ const MiniFooter = () => {
     <div className="mini-footer">
       <p>Visiter les archives</p>
       <ul>
-        {navigation.map((el) => (
-          <li>{el}</li>
+        {navigation.map((el, index) => (
+          <li key={index}>{el}</li>
         ))}
       </ul>
     </div>

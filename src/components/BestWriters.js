@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { bestWriters } from "./../data/bestWriters";
 
 const BestWriters = () => {
-  console.log(bestWriters);
+  const news = useSelector((state) => state.news);
+
+  let urlToImage = [];
+  let randomIamge;
+
+  if (news) {
+    for (let i = 0; i < 10; i++) {
+      urlToImage.push(news[i].urlToImage);
+    }
+    // randomIamge = urlToImage[~~(Math.random() * urlToImage.length)];
+    // console.log(randomIamge);
+  }
+
   return (
     <div className="best-writer">
       <h3 className="bw-head">Meilleurs écrivains</h3>
       <ul className="writer-container">
-        {bestWriters.map((writer) => (
-          <li className="writer">
+        {bestWriters.map((writer, index) => (
+          <li key={index} className="writer">
             <div className="img-container">
-              <img src="" alt="" />
+              <img src={writer.image} alt="" />
             </div>
             <div className="name-desc">
               <h3 className="writer-name">{writer.name}</h3>

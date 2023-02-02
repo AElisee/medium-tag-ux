@@ -99,10 +99,10 @@
 }
 
 .profil-modal.show {
-  visibility: hidden;
+  visibility: visible;
   transform: translateZ(0);
 }
 .profil-modal.hide {
-  visibility: visible;
+  visibility: hidden;
   transform: translateZ(-100px);
 }

@@ -1,12 +1,13 @@
 export const bestWriters = [
   {
-    name: "lorem",
+    name: "Roland Lindner",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    image: "",
+    image:
+      "https://media1.faz.net/ppmedia/aktuell/2161575750/1.8623773/facebook_teaser/tobias-duschl.jpg",
   },
   {
-    name: "consectetur",
+    name: "Colette Bennett",
     description: "Sequi dignissimos corrupti facere",
-    image: "",
+    image: "https://thispersondoesnotexist.com/image",
   },
 ];

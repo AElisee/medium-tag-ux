@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Log from "./Log";
 
 const Profil = () => {
@@ -6,8 +6,9 @@ const Profil = () => {
 
   // si le modal de profil est isVisible, l'enlever pendant le scroll
   window.document.addEventListener("scroll", () => {
-    setShowProfil(true);
+    setShowProfil(false);
   });
+
   return (
     <div className="profil">
       <div className="user-icon" onClick={() => setShowProfil(!showProfil)}>
@@ -17,7 +18,7 @@ const Profil = () => {
         <img src="./icons/chevron-down.svg" alt="user-circle-svg" />
       </div>
 
-      <div className={`profil-modal ${showProfil ? "show" : "hide"}`}>
+      <div className={`profil-modal ${showProfil === true ? "show" : "hide"}`}>
         <p id="start" className="pointer">
           Démarrez avec News
         </p>

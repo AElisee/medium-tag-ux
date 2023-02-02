@@ -1,6 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-const News = ({ news }) => {
+const News = () => {
+  const news = useSelector((state) => state.news);
+
   // defint des minutes aléatoires
   const minOfReading = () => {
     return Math.round(Math.random() + (Math.random() * 7 + 2));
@@ -25,7 +28,9 @@ const News = ({ news }) => {
       {news.map((item, index) => (
         <li key={index} className="item">
           <div className="h-item">
-            <span></span>
+            <span>
+              <img src={item.urlToImage} alt="" />
+            </span>
             <h4 id="author">{item.author ? item.author : "Auteur inconnu"}</h4>
             <p id="publish">- {dateFormater(item.publishedAt)}</p>
           </div>

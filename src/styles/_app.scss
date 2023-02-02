@@ -17,7 +17,7 @@
   }
   // navbar
   .navbar {
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: space-between;
@@ -193,9 +193,21 @@
                   height: 40px;
                   border-radius: 200px;
                   border: 1px solid #ccc;
+                  overflow: hidden;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
                 }
                 #author {
                   margin: 0 5px 0 10px;
+                  width: 150px;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;
+                  overflow: hidden;
                 }
                 #publish {
                   font-size: 0.8rem;
@@ -277,6 +289,12 @@
               border-radius: 300px;
               border: 2px solid white;
               background-color: rgb(0, 157, 192);
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
             }
 
             li:not(:last-child) {
@@ -357,21 +375,23 @@
             margin: 10px 0;
 
             .img-container {
-              border: 1px solid red;
+              border: 1px solid rgb(107, 101, 101);
               width: 40px;
               max-width: 40px;
               height: 40px;
               max-height: 40px;
               border-radius: 250px;
+              overflow: hidden;
               img {
-                background-color: rgb(1, 76, 76);
+                width: 100%;
+                height: 100%;
               }
             }
 
             .name-desc {
               padding: 0 7px;
               .writer-name {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 font-weight: 900;
               }
               .description {

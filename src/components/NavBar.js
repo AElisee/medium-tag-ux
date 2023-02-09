@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <div className="left-part">
-        <h3>logo</h3>
+        <h3>Clone medium ui</h3>
         <div id="search">
           <span>
             <img src="./icons/search.svg" alt="search-svg" />

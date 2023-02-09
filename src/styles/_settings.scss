@@ -33,6 +33,12 @@ ul {
   }
 }
 
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
 .follow {
   margin: 2.5px;
   background-color: rgb(34, 116, 175);

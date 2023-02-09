@@ -10,7 +10,6 @@ const Topics = () => {
     "obcaecati",
     "nisi fuga",
     "cupiditate culpa",
-    "Facilis numquam voluptatum",
     "incidunt",
     "dolorem aut saepe",
     "tempore minima vero ",

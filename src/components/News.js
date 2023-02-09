@@ -26,13 +26,19 @@ const News = () => {
   return (
     <>
       {news.map((item, index) => (
-        <li key={index} className="item">
+        <a
+          key={index}
+          className="item"
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="h-item">
             <span>
               <img src={item.urlToImage} alt="" />
             </span>
             <h4 id="author">{item.author ? item.author : "Auteur inconnu"}</h4>
-            <p id="publish">- {dateFormater(item.publishedAt)}</p>
+            <p id="publish">publié {dateFormater(item.publishedAt)}</p>
           </div>
           <div className="article">
             <h2 id="title">{item.title ? item.title : ""}</h2>
@@ -59,7 +65,7 @@ const News = () => {
               <img src="./icons/bookmark.svg" alt="bookmark-svg" />
             </span>
           </div>
-        </li>
+        </a>
       ))}
     </>
   );

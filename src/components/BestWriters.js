@@ -6,8 +6,6 @@ const BestWriters = () => {
   const news = useSelector((state) => state.news);
 
   let urlToImage = [];
-  let randomIamge;
-
   if (news) {
     for (let i = 0; i < 10; i++) {
       urlToImage.push(news[i].urlToImage);

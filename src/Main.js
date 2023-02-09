@@ -19,9 +19,11 @@ const Main = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const stickyPart = document.getElementById("stickyPart");
+    const sticky = stickyPart.offsetTop;
     axios
       .get(
-        "https://newsapi.org/v2/everything?q=tesla&from=2023-01-02&sortBy=publishedAt&apiKey=fc14d55b96cd41efb5e9459c5b07488c"
+        "https://newsapi.org/v2/everything?q=tesla&from=2023-01-09&sortBy=publishedAt&apiKey=fc14d55b96cd41efb5e9459c5b07488c"
       )
       .then((res) => {
         setTotalsResults(res.data.totalResults);
@@ -30,6 +32,17 @@ const Main = () => {
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
+
+    function addPositionSticky() {
+      if (window.pageYOffset >= sticky) {
+        stickyPart.classList.add("sticky");
+      } else {
+        stickyPart.classList.remove("sticky");
+      }
+    }
+    window.addEventListener("scroll", () => {
+      addPositionSticky();
+    });
   }, []);
 
   return (
@@ -52,9 +65,11 @@ const Main = () => {
         </div>
         <div className="right-part">
           <StorieWritter totalResults={totalResults} />
-          <Topics />
-          <BestWriters />
-          <MiniFooter />
+          <div id="stickyPart">
+            <Topics />
+            <BestWriters />
+            <MiniFooter />
+          </div>
         </div>
       </div>
     </div>

@@ -184,6 +184,11 @@
                   }
                 }
               }
+
+              &:nth-child(2n + 1) {
+                background-color: rgba(243, 250, 250, 0.688);
+              }
+
               .h-item {
                 cursor: pointer;
                 display: flex;
@@ -244,13 +249,100 @@
       }
     }
     .right-part {
-      // position: sticky;
       width: 340px;
       min-height: 100vh;
       height: max-content;
       top: 0;
       right: 0;
       border-left: 1px solid $gray-1;
+
+      #stickyPart {
+        border-left: 1px solid $gray-1;
+        .best-writer {
+          margin: 30px;
+          .bw-head {
+            padding: 20px 0;
+            font-size: 1rem;
+          }
+          .writer-container {
+            width: 100%;
+            margin-bottom: 40px;
+
+            .writer {
+              width: 100%;
+              display: grid;
+              grid-template-columns: 18% 62% 20%;
+              margin: 10px 0;
+
+              .img-container {
+                border: 1px solid rgb(107, 101, 101);
+                width: 40px;
+                max-width: 40px;
+                height: 40px;
+                max-height: 40px;
+                border-radius: 250px;
+                overflow: hidden;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+              .name-desc {
+                padding: 0 7px;
+                .writer-name {
+                  font-size: 1.1rem;
+                  font-weight: 900;
+                }
+                .description {
+                  font-size: 0.8rem;
+                  font-weight: 100;
+                }
+              }
+
+              .btn-container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+          p.show-more {
+            cursor: pointer;
+            color: $blue-1;
+            font-weight: 800;
+
+            &:hover {
+              color: rgb(0, 157, 192);
+            }
+          }
+        }
+        .mini-footer {
+          margin: 30px;
+
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 20px;
+
+            li {
+              cursor: pointer;
+              margin-right: 10px;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+
+      .sticky {
+        position: fixed;
+        bottom: 10px;
+        width: 330px;
+        transition: 0.4s ease-in-out;
+        // border-left: 1px solid $gray-1;
+      }
 
       .storie-writter {
         padding-bottom: 30px;
@@ -279,6 +371,7 @@
 
         .writer-photo {
           padding: 10px 0;
+
           ul {
             display: flex;
 
@@ -358,83 +451,7 @@
           }
         }
       }
-      .best-writer {
-        margin: 30px;
-        .bw-head {
-          padding: 20px 0;
-          font-size: 1rem;
-        }
-        .writer-container {
-          width: 100%;
-          margin-bottom: 40px;
 
-          .writer {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 18% 62% 20%;
-            margin: 10px 0;
-
-            .img-container {
-              border: 1px solid rgb(107, 101, 101);
-              width: 40px;
-              max-width: 40px;
-              height: 40px;
-              max-height: 40px;
-              border-radius: 250px;
-              overflow: hidden;
-              img {
-                width: 100%;
-                height: 100%;
-              }
-            }
-
-            .name-desc {
-              padding: 0 7px;
-              .writer-name {
-                font-size: 1.1rem;
-                font-weight: 900;
-              }
-              .description {
-                font-size: 0.8rem;
-                font-weight: 100;
-              }
-            }
-
-            .btn-container {
-              width: 100%;
-              height: 100%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-          }
-        }
-        p.show-more {
-          cursor: pointer;
-          color: $blue-1;
-          font-weight: 800;
-
-          &:hover {
-            color: rgb(0, 157, 192);
-          }
-        }
-      }
-
-      .mini-footer {
-        margin: 30px;
-
-        ul {
-          display: flex;
-          flex-wrap: wrap;
-          padding-top: 20px;
-
-          li {
-            cursor: pointer;
-            margin-right: 10px;
-            font-size: 0.9rem;
-          }
-        }
-      }
       @media screen and (max-width: 1050px) {
         display: none;
       }

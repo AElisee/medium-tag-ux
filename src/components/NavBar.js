@@ -1,12 +1,12 @@
 import React from "react";
-import Log from "./Log";
+import LogButton from "./LogButton";
 import Profil from "./Profil";
 
 const NavBar = () => {
   return (
     <div className="navbar">
       <div className="left-part">
-        <h3>Clone medium ui</h3>
+        <h3>News / News API</h3>
         <div id="search">
           <span>
             <img src="./icons/search.svg" alt="search-svg" />
@@ -21,7 +21,7 @@ const NavBar = () => {
           </span>
           <p>Ecrivez</p>
         </div>
-        <Log />
+        <LogButton />
         <Profil />
       </div>
     </div>

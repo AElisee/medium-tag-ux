@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import BestWriters from "./components/BestWriters";
 import Header from "./components/Header";
-import Log from "./components/Log";
+import LogButton from "./components/LogButton";
 import MiniFooter from "./components/MiniFooter";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
@@ -23,7 +23,8 @@ const Main = () => {
     const sticky = stickyPart.offsetTop;
     axios
       .get(
-        "https://newsapi.org/v2/everything?q=tesla&from=2023-01-09&sortBy=publishedAt&apiKey=fc14d55b96cd41efb5e9459c5b07488c"
+        // API
+        `${process.env.REACT_APP_API}`
       )
       .then((res) => {
         setTotalsResults(res.data.totalResults);
@@ -47,13 +48,13 @@ const Main = () => {
 
   return (
     <div className="app">
-      <Log />
+      <LogButton />
       <NavBar />
       <div className="main-container">
         <div className="left-part">
           <Header />
           {islLoading ? (
-            <p>L o o d i n g ...</p>
+            <p>L a o d i n g ...</p>
           ) : (
             <div className="new-container">
               <div className="news">

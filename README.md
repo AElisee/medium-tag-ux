@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+const dateFormater = (date) => {
+const publishedAt = date.split("T")[0];
+
+    let diffTime = Math.abs(new Date() - new Date(publishedAt));
+    let days = Math.floor(diffTime / (1000 * 3600 * 24));
+    console.log("diffTime:" + diffTime);
+    console.log("days:" + days);
+    if (days === 0) {
+      return "Aujourd'hui";
+    } else if (days === 1) {
+      return "il y a 1 jour";
+    } else {
+      return "il y a " + days + " jours";
+    }
+
+};

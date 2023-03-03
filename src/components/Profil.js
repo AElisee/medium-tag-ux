@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Log from "./Log";
+import LogButton from "./LogButton";
 
 const Profil = () => {
   const [showProfil, setShowProfil] = useState(false);
@@ -9,9 +9,30 @@ const Profil = () => {
     setShowProfil(false);
   });
 
+  // toogleProfil
+  const toggleProfil = () => {
+    setShowProfil((prevState) => !prevState);
+    console.log("click sur icon profil");
+  };
+
+  useEffect(() => {
+    const handleClickOutsideProfil = (e) => {
+      const profil = document.querySelector(".cheron-icon");
+      if (profil && !profil.contains(e.target) && showProfil) {
+        setShowProfil(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutsideProfil);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutsideProfil);
+    };
+  }, [showProfil]);
+  // ---
+
   return (
     <div className="profil">
-      <div className="user-icon" onClick={() => setShowProfil(!showProfil)}>
+      <div className="user-icon" onClick={toggleProfil}>
         <img src="./icons/user-circle.svg" alt="user-circle-svg" />
       </div>
       <div className="cheron-icon" onClick={() => setShowProfil(!showProfil)}>
@@ -22,7 +43,7 @@ const Profil = () => {
         <p id="start" className="pointer">
           Démarrez avec News
         </p>
-        <Log />
+        <LogButton />
         <div>
           <p id="p-star">
             <span>Devenir membre</span> <span id="star">&#9733;</span>

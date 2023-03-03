@@ -8,6 +8,7 @@ export const bestWriters = [
   {
     name: "Colette Bennett",
     description: "Sequi dignissimos corrupti facere",
-    image: "https://thispersondoesnotexist.com/image",
+    image:
+      "https://cdn.pixabay.com/photo/2023/02/13/10/30/eye-7787024_960_720.jpg",
   },
 ];

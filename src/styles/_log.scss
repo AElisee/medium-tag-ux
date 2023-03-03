@@ -9,12 +9,40 @@
       padding: 8px 15px;
       cursor: pointer;
     }
-    li#sign-up {
+    li#sign-up-button {
       background-color: rgb(34, 116, 175);
       color: white;
     }
-    li#sign-in {
+    li#sign-in-button {
       color: rgb(89, 86, 86);
+    }
+  }
+
+  // log modal
+  .log-modal {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    height: 95vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.17);
+    z-index: 1000;
+  }
+
+  .log-modal.visible {
+    display: block;
+
+    .sign-in-option,
+    .sign-up-option {
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
     }
   }
 }

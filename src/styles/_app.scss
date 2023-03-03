@@ -140,6 +140,17 @@
             display: grid;
             width: 100%;
 
+            // .scroll-infinite {
+            //   width: 650px;
+            //   max-width: 650px;
+
+            //   -ms-overflow-style: none; /* IE and Edge */
+            //   scrollbar-width: none; /* Firefox */
+            //   &::-webkit-scrollbar {
+            //     display: none;
+            //   }
+            // }
+
             .item {
               width: 679px;
               padding: 20px 0;
@@ -347,7 +358,7 @@
       .storie-writter {
         padding-bottom: 30px;
         margin: 30px;
-        border-bottom: 1px solid $gray-1;
+        // border-bottom: 1px solid $gray-1;
 
         ul {
           display: flex;
@@ -427,7 +438,7 @@
 
       .topics {
         margin: 30px;
-
+        border-top: 1px solid $gray-1;
         .t-head {
           padding: 20px 0;
         }
@@ -439,7 +450,7 @@
           li {
             cursor: pointer;
             padding: 8px 15px;
-            // border: 1px solid $gray-1;
+            font-size: 0.8rem;
             margin: 5px 10px;
             margin-left: 0;
             background-color: #eee;
